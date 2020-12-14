@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Pusher\Pusher;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//Route::group([‘middleware’ => ‘auth’], function(){  
+	//Route::get(‘video_chat’, ‘VideoChatController@index’);  
+	//Route::post(‘auth/video_chat’, ‘VideoChatController@auth’);
+//});
